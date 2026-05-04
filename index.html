@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reel Portfolio — UI Kit</title>
+  <link rel="stylesheet" href="tokens.css" />
+  <style>
+    /* Prevent flash of unstyled content */
+    body { background: #080809; }
+  </style>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel" src="Nav.jsx"></script>
+  <script type="text/babel" src="Hero.jsx"></script>
+  <script type="text/babel" src="Showreel.jsx"></script>
+  <script type="text/babel" src="Ticker.jsx"></script>
+  <script type="text/babel" src="Card.jsx"></script>
+  <script type="text/babel" src="Work.jsx"></script>
+  <script type="text/babel" src="Channels.jsx"></script>
+  <script type="text/babel" src="About.jsx"></script>
+  <script type="text/babel" src="Contact.jsx"></script>
+  <script type="text/babel" src="Footer.jsx"></script>
+  <script type="text/babel" src="Modal.jsx"></script>
+
+  <script type="text/babel">
+    const CONFIG = {
+      name: "Đặng Hải Cường",
+      tagline: "Freelance Video Editor · hỗ trợ marketing, quay chụp và dựng clip cho thương hiệu.",
+      eyebrow: "Freelance · Marketing · Video Editor",
+      aboutText: `Xin chào! Tôi là freelance video editor, hỗ trợ các team marketing trong việc quay chụp và dựng clip cho thương hiệu, nhãn hàng. Tôi nhận dự án từ video sự kiện, ra mắt sản phẩm, talk/phỏng vấn cho đến nội dung short-form bắt trend — mỗi dự án là một câu chuyện độc đáo cần được kể đúng cách.`,
+      stats: { projects: 500, years: 2, clients: 70 },
+      skills: ["CapCut","DaVinci Resolve","After Effects","Premiere Pro","Photoshop","Canva","Quay phim","Chụp ảnh","Color Grading","Dựng clip thương hiệu","Video sự kiện","Short-form / Trend","Cinematic"],
+      portrait: "assets/portrait.jpg",
+      contact: [
+        { label: "Email",    href: "mailto:haicuongdang3@gmail.com", icon: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>` },
+        { label: "Facebook", href: "https://www.facebook.com/hai.cuong.454619", icon: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>` },
+      ],
+      channels: [
+        { handle: "@phongthuy6.0",     name: "Phong Thủy 6.0",        platform: "youtube", url: "https://youtube.com/@phongthuy6.0",     year: "2023 — 2024",      mono: "PT", grad: "linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%)",  roles: ["Content Writer", "Editor"] },
+        { handle: "@taralebds",        name: "Tara Le BDS",            platform: "tiktok",  url: "https://www.tiktok.com/@taralebds",     year: "2023 — 2024",      mono: "TL", grad: "linear-gradient(135deg, #EC4899 0%, #06B6D4 100%)",  roles: ["Editor", "Content"] },
+        { handle: "@giayhadu",         name: "Giày Hà Du",             platform: "tiktok",  url: "https://www.tiktok.com/@giayhadu",      year: "2025 — nay",       status: "đang làm", mono: "GH", grad: "linear-gradient(135deg, #E8FF3D 0%, #F59E0B 100%)",  roles: ["Editor"] },
+        { handle: "@vohuyenthienthu",  name: "Võ Huyền Thiên Thư",     platform: "youtube", url: "https://youtube.com/@vohuyenthienthu", year: "Long-form / Postcard", mono: "VT", grad: "linear-gradient(135deg, #10B981 0%, #0EA5E9 100%)",  roles: ["Editor", "Set-up góc quay"] },
+      ],
+      videos: [
+        { title: "Vinh danh cuối năm",    category: "event",        driveId: "13ClDtDRTfsuN9kpxqtgqLLNqfKxdnOzA", description: "Video tổng kết & vinh danh cuối năm — dựng nhanh, năng lượng mạnh, âm nhạc cao trào.", tags: ["Sự kiện","Highlight","Color Grade"] },
+        { title: "Ra mắt sản phẩm mới",   category: "product",      driveId: "1GTWJorSXWM5vxyrBJoW_v2yw3RQxOsYU", description: "Video ra mắt sản phẩm — nhấn mạnh chi tiết, hero shot, typography động.",             tags: ["Sản phẩm","Motion","Launch"] },
+        { title: "Talk Biker",             category: "storytelling", driveId: "1AZVDnonLUO2Xr5IvJ2pjEwOvrwYjyRje", description: "Câu chuyện của những người đam mê xe — phỏng vấn kết hợp B-roll đường phố.",         tags: ["Storytelling","Documentary","B-roll"] },
+        { title: "Đu trend TikTok",        category: "trend",        driveId: "1AObgICO1zxEi1LmMPkiQqx5KlE9nCDCZ", description: "Bắt trend nhanh cho nội dung short-form — cắt nhịp theo beat, hook 3 giây đầu.",       tags: ["TikTok","Short-form","Trend"] },
+        { title: "Phỏng vấn",              category: "interview",    driveId: "1kRNNoqmSk1si3mUwQ__lBpKJyYFh2E5q", description: "Video phỏng vấn nhân vật — âm thanh sạch, khung hình điện ảnh, chuyển cảnh tự nhiên.", tags: ["Phỏng vấn","Interview","Cinematic"] },
+      ],
+    };
+
+    function App() {
+      const [active, setActive] = React.useState('home');
+      const [openIdx, setOpenIdx] = React.useState(null);
+
+      const scrollTo = (id) => {
+        const el = id === 'home' ? document.body : document.getElementById(id);
+        if (el) el.scrollIntoView ? el.scrollIntoView({ behavior: 'smooth', block: 'start' }) : window.scrollTo(0, 0);
+        setActive(id);
+      };
+
+      return (
+        <>
+          <Nav name={CONFIG.name} active={active} onNav={scrollTo} />
+          <Hero
+            name={CONFIG.name}
+            eyebrow={CONFIG.eyebrow}
+            desc={CONFIG.tagline}
+            stats={CONFIG.stats}
+            onViewWork={() => scrollTo('work')}
+            onPlayReel={() => scrollTo('showreel')}
+          />
+          <Showreel />
+          <Ticker items={CONFIG.skills} />
+          <Work videos={CONFIG.videos} onOpen={setOpenIdx} />
+          <Channels items={CONFIG.channels} />
+          <About aboutText={CONFIG.aboutText} skills={CONFIG.skills} stats={CONFIG.stats} portrait={CONFIG.portrait} />
+          <Contact links={CONFIG.contact} />
+          <Footer name={CONFIG.name} />
+          <Modal video={openIdx != null ? CONFIG.videos[openIdx] : null} onClose={() => setOpenIdx(null)} />
+        </>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
